@@ -5,9 +5,8 @@
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
 
 list_one = [2, 3, 5, 9, 3]
-my_list = [2, 3, 5, 9, 3, 1, 2, 3, 4, 5]
-l = []
-for i in range(len(my_list)):
+list_two = []
+for i in range(len(list_one)):
     if i % 2 != 0:
-        l.append(my_list[i])
-print(f'Сумма элементов  : {(sum(l))}')
+        list_two.append(list_one[i])
+print(f'Сумма элементов  : {(sum(list_two))}')
