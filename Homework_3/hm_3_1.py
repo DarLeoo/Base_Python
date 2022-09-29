@@ -3,10 +3,16 @@
 # Пример:
 #
 # - [2, 3, 5, 9, 3] -> на нечётных позициях элементы 3 и 9, ответ: 12
+# Задание переделано, оригинал задания в HM3
 
-list_one = [2, 3, 5, 9, 3]
-list_two = []
-for i in range(len(list_one)):
-    if i % 2 != 0:
-        list_two.append(list_one[i])
-print(f'Сумма элементов  : {(sum(list_two))}')
+def sum_nums():
+    list_one = list(map(int, input('Введите числа через проблел: ').split()))
+    return list_one
+
+
+def sums(f):
+    list_two = [f[i] for i in range(len(f)) if i % 2 != 0]
+    return sum(list_two)
+
+
+print(sums(sum_nums()))
